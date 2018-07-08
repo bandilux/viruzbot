@@ -27,7 +27,15 @@ client.on('message', message =>{
     .setTitle('BOT INFO')
     .setDescription(`•prefix --> vs!
 BOT COMMANDS
-• || vs!mass || vs!support || vs!info || vs!say || vs!ping || vs!serverinfo || vs!restart || vs!invite || vs!botinfo || `)
+• vs!mass 
+vs!support 
+vs!info 
+vs!say 
+vs!ping
+vs!serverinfo
+vs!restart 
+vs!invite
+vs!botinfo  `)
     .setColor('RANDOM')
    message.channel.sendEmbed(embed);
   }
@@ -42,13 +50,6 @@ client.on('message', message => {
   }
 });
 
-// Turn bot off (destroy), then turn it back on
-function resetBot(channel) {
-    // send channel a message that you're resetting bot [optional]
-    channel.send('Restarting...')
-    .then(msg => bot.destroy())
-    .then(() => bot.login(process.env.TOKEN));
-}
 
  
 
